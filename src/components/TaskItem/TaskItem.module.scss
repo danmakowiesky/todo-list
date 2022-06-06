@@ -1,0 +1,99 @@
+.container {
+  background: var(--gray-500);
+  color: var(--gray-100);
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+}
+
+.deleteButton {
+  line-height: 0;
+  border: 0;
+  background: transparent;
+
+  img {
+    width: 3rem;
+  }
+}
+
+p {
+  flex: 1;
+}
+
+.container + .container {
+  margin-top: 1.2rem;
+}
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 3px solid var(--blue);
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxContainer:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a purple background */
+.checkboxContainer input:checked ~ .checkmark {
+  background-color: var(--purple);
+  border: 3px solid var(--purple);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 7px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,40 @@
+.container {
+  max-width: 736px;
+  margin: 0 auto;
+  margin-top: 6.4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    gap: 0.8rem;
+  }
+}
+
+.createdLists {
+  color: var(--blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.doneLists {
+  color: var(--purple);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.badge {
+  color: var(--gray-200);
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: var(--gray-400);
+  border-radius: 999px;
+  padding: 0.2rem 0.9rem;
+}
+
+.list {
+  margin-top: 2.4rem;
+}

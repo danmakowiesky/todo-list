@@ -1,0 +1,37 @@
+.container {
+  max-width: 736px;
+  height: 5.3rem;
+  background-color: transparent;
+  margin: calc(0px - (5.3rem / 2)) auto 0;
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  width: 638px;
+  padding: 1.6rem;
+  background: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--gray-100);
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}
+
+.button {
+  border: none;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  gap: 8px;
+}
